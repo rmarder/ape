@@ -3808,6 +3808,13 @@ token_t lexer_next_token_internal(lexer_t *lex) {
                 }
                 break;
             }
+            case '#': {
+                read_char(lex);
+                while (lex->ch != '\n' && lex->ch != '\0') {
+                    read_char(lex);
+                }
+                continue;
+            }
             case '<': {
                 if (peek_char(lex) == '=') {
                     token_init(&out_tok, TOKEN_LTE, "<=", 2);
