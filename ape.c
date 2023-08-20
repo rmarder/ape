@@ -10541,7 +10541,7 @@ void object_to_string(object_t obj, strbuf_t *buf, bool quote_str) {
                 object_t iobj = object_get_array_value_at(obj, i);
                 object_to_string(iobj, buf, true);
                 if (i < (object_get_array_length(obj) - 1)) {
-                    strbuf_append(buf, ", ");
+                    strbuf_append(buf, ", \n");
                 }
             }
             strbuf_append(buf, "]");
@@ -10556,7 +10556,7 @@ void object_to_string(object_t obj, strbuf_t *buf, bool quote_str) {
                 strbuf_append(buf, ": ");
                 object_to_string(val, buf, true);
                 if (i < (object_get_map_length(obj) - 1)) {
-                    strbuf_append(buf, ", ");
+                    strbuf_append(buf, ", \n");
                 }
             }
             strbuf_append(buf, "}");
