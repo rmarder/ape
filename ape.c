@@ -8607,9 +8607,9 @@ static bool import_module(compiler_t *comp, const statement_t *import_stmt) { //
         goto end;
     }
     if (kg_is_path_absolute(module_path)) {
-        strbuf_appendf(filepath_buf, "%s.ape", module_path);
+        strbuf_appendf(filepath_buf, "%s.rsl", module_path);
     } else {
-        strbuf_appendf(filepath_buf, "%s%s.ape", file_scope->file->dir_path, module_path);
+        strbuf_appendf(filepath_buf, "%s%s.rsl", file_scope->file->dir_path, module_path);
     }
 
     if (strbuf_failed(filepath_buf)) {
