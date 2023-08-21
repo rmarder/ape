@@ -4,6 +4,7 @@ SPDX-License-Identifier: MIT
 ape
 https://github.com/kgabis/ape
 Copyright (c) 2023 Krzysztof Gabis
+Copyright (c) 2023 Robert Marder
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
